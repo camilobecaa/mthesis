@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    
+    <!-- Three.js and IFC.js libraries -->
+    <script type="module" src="https://unpkg.com/three@0.125.0/build/three.js"></script>
+    <script type="module" src="https://unpkg.com/ifcjs@0.0.30/web-ifc.js"></script>
+    <script type="module" src="https://unpkg.com/ifcjs@0.0.30/web-ifc-three.js"></script>
+</head>
+<body>
+    <form enctype="multipart/form-data" action="/upload" method="post">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <div id="ifcViewer" style="width: 600px; height: 400px;"></div>
+
+    <table id="dataTable">
+        <!-- Filled by JavaScript -->
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
