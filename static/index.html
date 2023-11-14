@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC and CSV File Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>IFC and CSV File Uploader</h1>
+
+    <form enctype="multipart/form-data">
+        <div>
+            <label for="ifcFile">Upload IFC File:</label>
+            <input type="file" id="ifcFile" name="file">
+        </div>
+        <div>
+            <label for="csvFile">Upload CSV File:</label>
+            <input type="file" id="csvFile" name="csv">
+        </div>
+        <input type="button" value="Upload" onclick="uploadFiles()">
+    </form>
+    <div class="tables-container">
+        <!-- IFC Data Table Container -->
+        <div class="table-container">
+            <h2>IFC Data</h2>
+            <table id="ifcDataTable">
+                <!-- IFC data populated by JavaScript -->
+            </table>
+        </div>
+    
+        <!-- CSV Data Table Container -->
+        <div class="table-container">
+            <h2>CSV Data</h2>
+            <table id="csvDataTable">
+                <!-- CSV data populated by JavaScript -->
+            </table>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
